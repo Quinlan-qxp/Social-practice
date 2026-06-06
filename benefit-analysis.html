@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山水田园·瑶韵河坝乡村文旅项目效益分析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #f8faf8 0%, #e8f0e8 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(rgba(45, 90, 61, 0.7), rgba(45, 90, 61, 0.85)),
+                        url('wheat-field.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        .header .producer {
+            font-size: 13px;
+            opacity: 0.75;
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            display: inline-block;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .tab {
+            padding: 12px 24px;
+            background: #f0f4f0;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tab:hover {
+            background: #e0e8e0;
+            color: #4a7c59;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.2);
+        }
+        .tab.active {
+            background: linear-gradient(135deg, #4a7c59 0%, #5a9c6a 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(74, 124, 89, 0.3);
+        }
+        .tab-icon {
+            margin-right: 6px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #f0f4f0;
+        }
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: white;
+        }
+        .icon-homestay { background: url('homestay_v3.jpg'); background-size: cover; background-position: center; }
+        .icon-social { background: url('cultural_tourism_v3.jpg'); background-size: cover; background-position: center; }
+        .icon-eco { background: url('ecology_v3.jpg'); background-size: cover; background-position: center; }
+        .icon-agri { background: url('low_altitude_economy_v4.jpg'); background-size: cover; background-position: center; }
+        .icon-digital { background: url('digital_marketing_v4.jpg'); background-size: cover; background-position: center; }
+        .icon-total { background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%); }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d3a2e;
+        }
+        .card-desc {
+            font-size: 13px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .input-section {
+            margin-bottom: 24px;
+        }
+        .input-section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #4a7c59;
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #4a7c59;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 600px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+        .input-group {
+            margin-bottom: 0;
+        }
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #e8f0e8;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #4a7c59;
+            box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+        }
+        .input-group .unit {
+            font-size: 11px;
+            color: #999;
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .result-box {
+            background: linear-gradient(135deg, #f8faf8 0%, #f0f8f0 100%);
+            border: 1px solid #d4e8d4;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .result-box h4 {
+            font-size: 14px;
+            color: #2d5a3d;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e8e0;
+        }
+        .result-row:last-child { border-bottom: none; }
+        .result-row .label {
+            color: #666;
+            font-size: 13px;
+        }
+        .result-row .value {
+            font-weight: 600;
+            color: #2d5a3d;
+            font-size: 14px;
+        }
+        .result-row .value.highlight { color: #e67e22; }
+        .result-row .value.green { color: #27ae60; font-weight: 700; }
+
+        .family-result {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 1px solid #81c784;
+            margin-top: 16px;
+        }
+        .family-result h4 { color: #2e7d32; }
+
+        .btn-calculate {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #4a7c59 0%, #5a9c6a 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+            margin-top: 20px;
+        }
+        .btn-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 124, 89, 0.4);
+        }
+
+        /* 侧边悬浮按钮 */
+        .float-btn {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        .float-btn:hover {
+            transform: translateY(-50%) scale(1.05);
+        }
+        .float-btn .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(26, 188, 156, 0.4);
+            transition: all 0.3s;
+        }
+        .float-btn:hover .icon-wrapper {
+            box-shadow: 0 6px 25px rgba(26, 188, 156, 0.5);
+        }
+        .float-btn .icon {
+            font-size: 28px;
+            color: white;
+        }
+        .float-btn .label {
+            margin-top: 6px;
+            font-size: 11px;
+            color: #16a085;
+            font-weight: 600;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* 侧边面板 */
+        .side-panel {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 380px;
+            height: 100vh;
+            background: white;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+            z-index: 1001;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            padding: 30px 24px;
+        }
+        .side-panel.open {
+            right: 0;
+        }
+        .side-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #f0f4f0;
+        }
+        .side-panel-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3a2e;
+        }
+        .close-btn {
+            width: 36px;
+            height: 36px;
+            background: #f0f4f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            color: #666;
+            transition: all 0.2s;
+        }
+        .close-btn:hover {
+            background: #e0e8e0;
+            color: #333;
+        }
+
+        .weight-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .weight-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #fffef8;
+            border-radius: 10px;
+            border: 1px solid #f0e8d0;
+        }
+        .weight-item label {
+            flex: 1;
+            font-size: 13px;
+            color: #555;
+        }
+        .weight-item input {
+            width: 60px;
+            padding: 8px;
+            border: 2px solid #e8d890;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .weight-item span {
+            font-size: 13px;
+            color: #d4a520;
+            font-weight: 600;
+        }
+
+        .weight-total-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, #d4a520 0%, #e8b830 100%);
+            color: white;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .scores-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .score-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: #f8faf8;
+            border-radius: 10px;
+            border: 1px solid #d4e8d4;
+        }
+        .score-box .label {
+            font-size: 13px;
+            color: #666;
+        }
+        .score-box .value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d5a3d;
+        }
+
+        .final-card {
+            background: linear-gradient(rgba(45, 90, 61, 0.85), rgba(74, 124, 89, 0.9)),
+                        url('wheat-field.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        .final-card .label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .final-card .score {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1;
+            margin: 16px 0;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .final-card .unit {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .final-card .grade {
+            display: inline-block;
+            padding: 6px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            font-size: 16px;
+            margin-top: 12px;
+        }
+        .final-card .note {
+            font-size: 13px;
+            opacity: 0.85;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* 遮罩层 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* 顶部导航按钮组 */
+        .nav-actions {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 100;
+        }
+        
+        .nav-btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        
+        .nav-btn-import {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+        }
+        
+        .nav-btn-import:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* 数据导入模态框 */
+        .import-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .import-modal.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .import-modal h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .import-modal h3::before {
+            content: '📊';
+            font-size: 24px;
+        }
+        
+        .import-section {
+            margin-bottom: 24px;
+        }
+        
+        .import-section h4 {
+            font-size: 14px;
+            color: #667eea;
+            margin-bottom: 12px;
+            padding-left: 10px;
+            border-left: 3px solid #667eea;
+        }
+        
+        /* 文件拖拽区域 */
+        .drop-zone {
+            border: 2px dashed #d0d0d0;
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            background: #fafbfc;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .drop-zone:hover, .drop-zone.dragover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+        
+        .drop-zone-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .drop-zone-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .drop-zone-hint {
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .drop-zone input[type="file"] {
+            display: none;
+        }
+        
+        .drop-zone.has-file {
+            border-color: #4CAF50;
+            background: rgba(76, 175, 80, 0.05);
+        }
+        
+        .drop-zone.has-file .drop-zone-icon {
+            font-size: 36px;
+        }
+        
+        .import-textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 14px;
+            border: 2px solid #e8f0e8;
+            border-radius: 10px;
+            font-size: 13px;
+            font-family: monospace;
+            resize: vertical;
+            transition: all 0.2s;
+        }
+        
+        .import-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .import-hint {
+            font-size: 12px;
+            color: #888;
+            margin-top: 8px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .import-hint code {
+            background: #e8f0e8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        
+        .import-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .import-btn-primary {
+            flex: 1;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .import-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .import-btn-secondary {
+            padding: 14px 24px;
+            background: #f0f0f0;
+            color: #666;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .import-btn-secondary:hover {
+            background: #e0e0e0;
+        }
+        
+        .mapping-preview {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 16px;
+            margin-top: 16px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .mapping-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            background: white;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+        
+        .mapping-item .field {
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        .mapping-item .value {
+            color: #333;
+        }
+        
+        .mapping-item .empty {
+            color: #ccc;
+            font-style: italic;
+        }
+        
+        .success-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border-radius: 10px;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+            z-index: 10000;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.3s;
+        }
+        
+        .success-toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .batch-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e8f0e8;
+        }
+        
+        .batch-btn {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .batch-btn-calculate {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+        }
+        
+        .batch-btn-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+        
+        .batch-btn-export {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+        }
+        
+        .batch-btn-export:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: #f0f0f0;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .close-modal:hover {
+            background: #e0e0e0;
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>山水田园·瑶韵河坝</h1>
+        <div class="subtitle">乡村文旅项目效益分析</div>
+        <div class="producer">首都经济贸易大学暑期实践团队天佑小组</div>
+        <div class="producer-info" style="font-size: 12px; opacity: 0.7; margin-top: 8px;">制作人：齐浩男 &nbsp; 框架搭建：田钰萱</div>
+        <div class="nav-actions">
+            <button class="nav-btn nav-btn-import" onclick="openImportModal()">📥 数据导入</button>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" data-tab="homestay">民宿经营</button>
+        <button class="tab" data-tab="social">乡村文旅</button>
+        <button class="tab" data-tab="eco">村落生态</button>
+        <button class="tab" data-tab="agri">低空经济</button>
+        <button class="tab" data-tab="digital">数字营销</button>
+    </div>
+
+    <div class="container">
+        <!-- 民宿经营 -->
+        <div class="tab-content active" id="tab-homestay">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-homestay"></div>
+                    <div>
+                        <div class="card-title">民宿经营经济收入分析</div>
+                        <div class="card-desc">关注入住率、客单价、停留时间，计算增量空间</div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">基础数据</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>当前民宿入住率</label>
+                            <input type="number" id="occRate" placeholder="65" step="0.1">
+                            <div class="unit">%</div>
+                        </div>
+                        <div class="input-group">
+                            <label>当前客单价</label>
+                            <input type="number" id="avgPrice" placeholder="280" step="1">
+                            <div class="unit">元/人</div>
+                        </div>
+                        <div class="input-group">
+                            <label>当前日均停留时间</label>
+                            <input type="number" id="stayTime" placeholder="1.2" step="0.1">
+                            <div class="unit">小时（基准1.5h）</div>
+                        </div>
+                        <div class="input-group">
+                            <label>当前人均消费</label>
+                            <input type="number" id="perCapita" placeholder="150" step="1">
+                            <div class="unit">元/人</div>
+                        </div>
+                        <div class="input-group">
+                            <label>目标日均停留时间</label>
+                            <input type="number" id="targetStayTime" placeholder="3.0" step="0.1">
+                            <div class="unit">小时</div>
+                        </div>
+                        <div class="input-group">
+                            <label>目标人均消费</label>
+                            <input type="number" id="targetPerCapita" placeholder="400" step="1">
+                            <div class="unit">元/人</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">附加收益</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>无人机拍摄宣传月增收</label>
+                            <input type="number" id="dronePromoIncome" placeholder="3000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-calculate" onclick="calculateHomestay()">计算民宿经营效益</button>
+                <div class="result-box" style="margin-top: 20px;">
+                    <h4>📈 增量空间分析</h4>
+                    <div class="result-row">
+                        <span class="label">距1.5h基准差值</span>
+                        <span class="value" id="stayTimeGap">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">停留时间提升空间</span>
+                        <span class="value" id="stayTimeIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">人均消费提升空间</span>
+                        <span class="value" id="perCapitaIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">综合消费提升指数</span>
+                        <span class="value highlight" id="incomeIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">日均每游客增收潜力</span>
+                        <span class="value green" id="dailyGain">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">无人机拍摄月增收</span>
+                        <span class="value green" id="homestayExtraIncome">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 乡村文旅社会影响 -->
+        <div class="tab-content" id="tab-social">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-social"></div>
+                    <div>
+                        <div class="card-title">乡村文旅社会影响评估</div>
+                        <div class="card-desc">绣娘群体收入变化，家庭增收测算</div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">绣娘收入结构</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>绣娘原单一月工资</label>
+                            <input type="number" id="originalWage" placeholder="2500" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>绣娘订单月收入</label>
+                            <input type="number" id="embroideryOrderIncome" placeholder="2000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>文创产品附加价值月收入</label>
+                            <input type="number" id="culturalProductIncome" placeholder="1800" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>非遗体验服务月收入</label>
+                            <input type="number" id="intangibleIncome" placeholder="1000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>剧本杀等项目月收入</label>
+                            <input type="number" id="gameIncome" placeholder="800" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>旅拍等服务月收入</label>
+                            <input type="number" id="photoIncome" placeholder="600" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>研学合作月收入</label>
+                            <input type="number" id="studyTourCoopIncome" placeholder="1500" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>涉及绣娘家庭数量</label>
+                            <input type="number" id="embroideryFamilies" placeholder="50" step="1">
+                            <div class="unit">户</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-calculate" onclick="calculateSocial()">计算社会影响效益</button>
+                <div class="result-box" style="margin-top: 20px;">
+                    <h4>📊 收入对比分析</h4>
+                    <div class="result-row">
+                        <span class="label">原月收入</span>
+                        <span class="value" id="originalIncome">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">升级后月收入</span>
+                        <span class="value green" id="upgradedIncome">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">收入增长率</span>
+                        <span class="value highlight" id="incomeGrowth">-</span>
+                    </div>
+                </div>
+                <div class="result-box family-result">
+                    <h4>👨‍👩‍👧 家庭增收测算（假定每家至少1绣娘+1文创店铺，其余项目平均）</h4>
+                    <div class="result-row">
+                        <span class="label">绣娘工资月增收</span>
+                        <span class="value" id="wageIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">绣娘订单收入月增收</span>
+                        <span class="value" id="embroideryIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">文创产品月增收</span>
+                        <span class="value" id="culturalIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">其他项目月均增收（均分）</span>
+                        <span class="value" id="otherIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">家庭月总增收</span>
+                        <span class="value green" id="familyIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">全部家庭年增收总额</span>
+                        <span class="value green" id="annualFamilyIncrease">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 村落生态 -->
+        <div class="tab-content" id="tab-eco">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-eco"></div>
+                    <div>
+                        <div class="card-title">村落生态发展效益</div>
+                        <div class="card-desc">环境整治溢价、基础设施完善效益</div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">打卡点与资产</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>整治前网红打卡点数量</label>
+                            <input type="number" id="originalSpots" placeholder="2" step="1">
+                            <div class="unit">个</div>
+                        </div>
+                        <div class="input-group">
+                            <label>整治后网红打卡点数量</label>
+                            <input type="number" id="newSpots" placeholder="8" step="1">
+                            <div class="unit">个</div>
+                        </div>
+                        <div class="input-group">
+                            <label>整治前房价/地租</label>
+                            <input type="number" id="originalRent" placeholder="800" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>整治后房价/地租</label>
+                            <input type="number" id="newRent" placeholder="1200" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">民宿评级与监测</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>整治前民宿评级</label>
+                            <input type="number" id="originalRating" placeholder="2" step="0.1" min="1" max="5">
+                            <div class="unit">星级（1-5）</div>
+                        </div>
+                        <div class="input-group">
+                            <label>整治后民宿评级</label>
+                            <input type="number" id="newRating" placeholder="4" step="0.1" min="1" max="5">
+                            <div class="unit">星级（1-5）</div>
+                        </div>
+                        <div class="input-group">
+                            <label>无人机巡检监测月效益</label>
+                            <input type="number" id="droneMonitorIncome" placeholder="2000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-calculate" onclick="calculateEco()">计算生态发展效益</button>
+                <div class="result-box" style="margin-top: 20px;">
+                    <h4>📈 生态环境溢价分析</h4>
+                    <div class="result-row">
+                        <span class="label">打卡点增幅</span>
+                        <span class="value" id="spotIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">房价/地租涨幅</span>
+                        <span class="value" id="rentIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">民宿评级提升</span>
+                        <span class="value" id="ratingIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">无人机巡检月效益</span>
+                        <span class="value green" id="droneMonitorResult">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 低空经济农业 -->
+        <div class="tab-content" id="tab-agri">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-agri"></div>
+                    <div>
+                        <div class="card-title">低空经济农业增收效益</div>
+                        <div class="card-desc">无人机农业服务、降本增效分析</div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">无人机服务收入</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>无人机播种服务月收入</label>
+                            <input type="number" id="droneSeedingIncome" placeholder="3000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>无人机施肥喷药月收入</label>
+                            <input type="number" id="droneFertilizeIncome" placeholder="2500" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>无人机农情监测月收入</label>
+                            <input type="number" id="droneAgriMonitorIncome" placeholder="1500" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">成本对比</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>传统人工农作业月成本</label>
+                            <input type="number" id="traditionalAgriCost" placeholder="8000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>无人机作业月成本</label>
+                            <input type="number" id="droneAgriCost" placeholder="3500" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>涉及农户数量</label>
+                            <input type="number" id="agriFamilies" placeholder="30" step="1">
+                            <div class="unit">户</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-calculate" onclick="calculateAgri()">计算农业增收效益</button>
+                <div class="result-box" style="margin-top: 20px;">
+                    <h4>📈 低空经济农业效益分析</h4>
+                    <div class="result-row">
+                        <span class="label">无人机服务总收入</span>
+                        <span class="value" id="droneAgriTotalIncome">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">农业作业成本节省</span>
+                        <span class="value green" id="agriCostSaving">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">农户月均增收</span>
+                        <span class="value green" id="agriFamilyIncrease">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">全部农户年增收总额</span>
+                        <span class="value green" id="agriAnnualIncrease">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 数字营销 -->
+        <div class="tab-content" id="tab-digital">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon icon-digital"></div>
+                    <div>
+                        <div class="card-title">数字营销效益分析</div>
+                        <div class="card-desc">电商渠道vs线下渠道、私域社群运营</div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">渠道收益对比</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>电商月订单收入</label>
+                            <input type="number" id="ecommIncome" placeholder="10000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>电商月投流成本</label>
+                            <input type="number" id="ecommCost" placeholder="3000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                        <div class="input-group">
+                            <label>传统线下渠道月净收入</label>
+                            <input type="number" id="offlineIncome" placeholder="5000" step="1">
+                            <div class="unit">元/月</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-section-title">私域社群运营</div>
+                    <div class="grid-2">
+                        <div class="input-group">
+                            <label>私域社群活跃度</label>
+                            <input type="number" id="activityRate" placeholder="65" step="1" min="0" max="100">
+                            <div class="unit">%</div>
+                        </div>
+                        <div class="input-group">
+                            <label>私域客户复购率</label>
+                            <input type="number" id="rebuyRate" placeholder="40" step="1" min="0" max="100">
+                            <div class="unit">%</div>
+                        </div>
+                        <div class="input-group">
+                            <label>私域用户数量</label>
+                            <input type="number" id="privateUsers" placeholder="500" step="1">
+                            <div class="unit">人</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-calculate" onclick="calculateDigital()">计算数字营销效益</button>
+                <div class="result-box" style="margin-top: 20px;">
+                    <h4>📈 数字营销效益分析</h4>
+                    <div class="result-row">
+                        <span class="label">电商净收益</span>
+                        <span class="value" id="digitalNetIncome">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">数字平台优势（vs线下）</span>
+                        <span class="value" id="digitalAdvantage">-</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">私域健康度价值</span>
+                        <span class="value green" id="privateValue">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 侧边悬浮按钮 -->
+    <div class="float-btn" onclick="openPanel()">
+        <div class="icon-wrapper">
+            <div class="icon">📊</div>
+        </div>
+        <div class="label">综合评估入口</div>
+    </div>
+
+    <!-- 遮罩层 -->
+    <div class="overlay" onclick="closePanel()"></div>
+
+    <!-- 侧边面板 -->
+    <div class="side-panel" id="sidePanel">
+        <div class="side-panel-header">
+            <div class="side-panel-title">综合效益评估</div>
+            <div class="close-btn" onclick="closePanel()">✕</div>
+        </div>
+        <div class="input-section">
+            <div class="input-section-title">模块权重设置</div>
+            <div class="weight-grid">
+                <div class="weight-item">
+                    <label>民宿经营经济收入</label>
+                    <input type="number" id="weight1" value="25" step="1" min="0" max="100">
+                    <span>%</span>
+                </div>
+                <div class="weight-item">
+                    <label>乡村文旅社会影响</label>
+                    <input type="number" id="weight2" value="20" step="1" min="0" max="100">
+                    <span>%</span>
+                </div>
+                <div class="weight-item">
+                    <label>村落生态发展效益</label>
+                    <input type="number" id="weight3" value="20" step="1" min="0" max="100">
+                    <span>%</span>
+                </div>
+                <div class="weight-item">
+                    <label>低空经济农业增收</label>
+                    <input type="number" id="weight5" value="15" step="1" min="0" max="100">
+                    <span>%</span>
+                </div>
+                <div class="weight-item">
+                    <label>数字营销效益</label>
+                    <input type="number" id="weight4" value="20" step="1" min="0" max="100">
+                    <span>%</span>
+                </div>
+            </div>
+            <div class="weight-total-bar">
+                <span>权重总和</span>
+                <span id="weightSum">100%</span>
+            </div>
+        </div>
+        <button class="btn-calculate" onclick="calculateAll()">计算综合效益评分</button>
+        <div id="finalScore" style="margin-top: 24px;">
+            <div class="scores-row">
+                <div class="score-box">
+                    <span class="label">民宿经营</span>
+                    <span class="value" id="score1">-</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">乡村文旅</span>
+                    <span class="value" id="score2">-</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">村落生态</span>
+                    <span class="value" id="score3">-</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">低空经济</span>
+                    <span class="value" id="score5">-</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">数字营销</span>
+                    <span class="value" id="score4">-</span>
+                </div>
+            </div>
+            <div class="final-card" id="resultCard">
+                <div class="label">综合效益评分</div>
+                <div class="score"><span id="totalScore">请计算</span><span class="unit"></span></div>
+                <div class="grade" id="grade" style="opacity:0.6">待评估</div>
+                <div class="note" id="analysisNote">请先填写各模块数据，然后点击「计算综合效益评分」按钮获取评估结果。系统将根据您设置的权重，综合计算五项指标得出最终评分。</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const BASELINE_STAY_TIME = 1.5;
+        let moduleScores = { score1: 0, score2: 0, score3: 0, score4: 0, score5: 0 };
+
+        // 数据导入相关函数
+        function openImportModal() {
+            document.getElementById('importModal').classList.add('show');
+            document.getElementById('importOverlay').classList.add('show');
+        }
+
+        function closeImportModal() {
+            document.getElementById('importModal').classList.remove('show');
+            document.getElementById('importOverlay').classList.remove('show');
+        }
+
+        function clearImportData() {
+            document.getElementById('mappingPreview').innerHTML = '<div class="mapping-item"><span class="field">等待数据...</span></div>';
+            document.getElementById('dropZone').classList.remove('has-file');
+        }
+
+        function showSuccessToast(message = '✓ 数据导入成功！') {
+            const toast = document.getElementById('successToast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // 文件拖拽处理
+        function initFileDropZone() {
+            const dropZone = document.getElementById('dropZone');
+            const fileInput = document.getElementById('fileInput');
+            
+            // 点击打开文件选择
+            dropZone.addEventListener('click', () => {
+                fileInput.click();
+            });
+            
+            // 文件选择处理
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    handleFile(e.target.files[0]);
+                }
+            });
+            
+            // 拖拽悬停效果
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            });
+            
+            dropZone.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+            });
+            
+            // 拖拽放下处理
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+                
+                if (e.dataTransfer.files.length > 0) {
+                    handleFile(e.dataTransfer.files[0]);
+                }
+            });
+        }
+
+        function handleFile(file) {
+            const fileName = file.name.toLowerCase();
+            
+            // 检查文件类型
+            if (!fileName.endsWith('.csv') && !fileName.endsWith('.xlsx') && 
+                !fileName.endsWith('.xls') && !fileName.endsWith('.txt')) {
+                alert('不支持的文件格式！请上传 .csv, .xlsx, .xls 或 .txt 文件。');
+                return;
+            }
+            
+            const reader = new FileReader();
+            
+            reader.onload = (e) => {
+                const content = e.target.result;
+                
+                // 尝试解析CSV或文本文件
+                if (fileName.endsWith('.csv') || fileName.endsWith('.txt')) {
+                    parseAndPreview(content);
+                } else {
+                    // Excel文件需要特殊处理，这里简化为文本解析
+                    parseAndPreview(content);
+                }
+            };
+            
+            reader.onerror = () => {
+                alert('文件读取失败！');
+            };
+            
+            if (fileName.endsWith('.csv') || fileName.endsWith('.txt')) {
+                reader.readAsText(file, 'UTF-8');
+            } else {
+                // Excel文件的二进制读取（简化处理）
+                reader.readAsBinaryString(file);
+            }
+        }
+
+        // 字段映射规则
+        const fieldMappings = {
+            // 民宿经营模块
+            'occRate': ['入住率', '民宿入住率', '当前民宿入住率', 'occRate', 'occ_rate', 'occ'],
+            'avgPrice': ['客单价', '当前客单价', 'avgPrice', 'avg_price', 'avg', 'price'],
+            'stayTime': ['停留时间', '日均停留时间', '当前日均停留时间', 'stayTime', 'stay_time', 'stay'],
+            'perCapita': ['人均消费', '当前人均消费', 'perCapita', 'per_capita', 'per', 'perCapita'],
+            'targetStayTime': ['目标停留时间', '目标日均停留时间', 'targetStayTime', 'target_stay_time'],
+            'targetPerCapita': ['目标人均消费', '目标消费', 'targetPerCapita', 'target_per_capita'],
+            'dronePromoIncome': ['无人机宣传', '无人机拍摄', 'dronePromoIncome', 'drone_promo', 'droneIncome', '无人机增收'],
+            
+            // 乡村文旅模块
+            'originalWage': ['绣娘工资', '原工资', '绣娘原工资', 'originalWage', 'wage', '工资'],
+            'embroideryOrderIncome': ['订单收入', '绣品订单', '订单', 'embroideryOrderIncome', 'orderIncome'],
+            'culturalProductIncome': ['文创收入', '文创产品', 'culturalProductIncome', 'culturalIncome'],
+            'intangibleIncome': ['非遗收入', '非遗体验', 'intangibleIncome', 'intangible'],
+            'gameIncome': ['剧本杀', '游戏收入', 'gameIncome', 'scriptIncome'],
+            'photoIncome': ['旅拍', '拍摄收入', 'photoIncome', 'photo'],
+            'studyTourCoopIncome': ['研学', '研学收入', 'studyTourCoopIncome', 'studyTour', '研学合作'],
+            'embroideryFamilies': ['绣娘家庭', '家庭数', 'embroideryFamilies', 'families'],
+            
+            // 村落生态模块
+            'originalSpots': ['原打卡点', '原网红点', 'originalSpots', 'originalSpots', 'spots'],
+            'newSpots': ['新打卡点', '新网红点', 'newSpots', 'newSpots'],
+            'originalRent': ['原租金', '原始租金', 'originalRent', 'rent'],
+            'newRent': ['新租金', '现在租金', 'newRent'],
+            'originalRating': ['原评级', '原始评级', 'originalRating', 'rating'],
+            'newRating': ['新评级', '现在评级', 'newRating'],
+            'droneMonitorIncome': ['生态监测', '环境监测', 'droneMonitorIncome', 'monitorIncome'],
+            
+            // 低空经济模块
+            'droneSeedingIncome': ['无人机播种', '播种收入', 'droneSeedingIncome', 'seedingIncome'],
+            'droneFertilizeIncome': ['无人机施肥', '施肥收入', 'droneFertilizeIncome', 'fertilizeIncome'],
+            'droneAgriMonitorIncome': ['农业监测', '农情监测', 'droneAgriMonitorIncome', 'agriMonitorIncome'],
+            'traditionalAgriCost': ['传统成本', '传统农业成本', 'traditionalAgriCost', 'traditionalCost'],
+            'droneAgriCost': ['无人机成本', '智能成本', 'droneAgriCost'],
+            'agriFamilies': ['农业家庭', '农户数', 'agriFamilies'],
+            
+            // 数字营销模块
+            'ecommIncome': ['电商收入', '线上收入', 'ecommIncome', 'ecomm', 'onlineIncome'],
+            'ecommCost': ['电商成本', '线上成本', 'ecommCost', 'cost'],
+            'offlineIncome': ['线下收入', '传统收入', 'offlineIncome', 'offline'],
+            'activityRate': ['活跃率', '客户活跃率', 'activityRate', 'activity'],
+            'rebuyRate': ['复购率', '回头率', 'rebuyRate', 'rebuy'],
+            'privateUsers': ['私域用户', '私域人数', 'privateUsers', 'private']
+        };
+
+        function parseTableData(text) {
+            const lines = text.trim().split('\n');
+            if (lines.length < 2) return null;
+            
+            // 检测分隔符
+            const firstLine = lines[0];
+            let delimiter = '\t';
+            if (firstLine.includes(',') && !firstLine.includes('\t')) {
+                delimiter = ',';
+            }
+            
+            const headers = lines[0].split(delimiter).map(h => h.trim());
+            const data = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(delimiter).map(v => v.trim());
+                const row = {};
+                headers.forEach((header, index) => {
+                    if (values[index]) {
+                        row[header] = values[index];
+                    }
+                });
+                data.push(row);
+            }
+            
+            return { headers, data };
+        }
+
+        // 保存解析后的数据
+        let parsedTableData = null;
+
+        function parseAndPreview(content) {
+            const parsed = parseTableData(content);
+            if (!parsed) {
+                alert('数据格式错误！');
+                return;
+            }
+            
+            parsedTableData = parsed; // 保存数据
+            
+            // 更新drop zone显示
+            const dropZone = document.getElementById('dropZone');
+            dropZone.classList.add('has-file');
+            dropZone.querySelector('.drop-zone-text').textContent = `已加载: ${parsed.headers.length} 个字段, ${parsed.data.length} 行`;
+            
+            // 显示字段映射预览
+            const mappings = [];
+            parsed.headers.forEach(header => {
+                const matchedField = matchField(header);
+                if (matchedField) {
+                    const firstRowValue = parsed.data[0]?.[header] || '';
+                    mappings.push({
+                        header,
+                        field: matchedField,
+                        value: firstRowValue
+                    });
+                }
+            });
+            
+            if (mappings.length === 0) {
+                document.getElementById('mappingPreview').innerHTML = '<div class="mapping-item"><span class="field">未识别到有效字段</span></div>';
+                return;
+            }
+            
+            const previewHTML = mappings.map(m => `
+                <div class="mapping-item">
+                    <span class="field">${getFieldLabel(m.field)}</span>
+                    <span class="value">${m.value || '<span class="empty">未填写</span>'}</span>
+                </div>
+            `).join('');
+            
+            document.getElementById('mappingPreview').innerHTML = previewHTML;
+        }
+
+        function matchField(header) {
+            const normalizedHeader = header.toLowerCase().replace(/[_\s-]/g, '');
+            
+            for (const [fieldId, aliases] of Object.entries(fieldMappings)) {
+                for (const alias of aliases) {
+                    const normalizedAlias = alias.toLowerCase().replace(/[_\s-]/g, '');
+                    if (normalizedHeader === normalizedAlias || 
+                        normalizedHeader.includes(normalizedAlias) || 
+                        normalizedAlias.includes(normalizedHeader)) {
+                        return fieldId;
+                    }
+                }
+            }
+            return null;
+        }
+
+        function getFieldLabel(fieldId) {
+            const labels = {
+                occRate: '入住率(%)',
+                avgPrice: '客单价(元)',
+                stayTime: '停留时间(h)',
+                perCapita: '人均消费(元)',
+                targetStayTime: '目标停留时间(h)',
+                targetPerCapita: '目标消费(元)',
+                dronePromoIncome: '无人机宣传收入',
+                originalWage: '绣娘原工资',
+                embroideryOrderIncome: '绣品订单收入',
+                culturalProductIncome: '文创产品收入',
+                intangibleIncome: '非遗体验收入',
+                gameIncome: '剧本杀收入',
+                photoIncome: '旅拍收入',
+                studyTourCoopIncome: '研学收入',
+                embroideryFamilies: '绣娘家庭数',
+                originalSpots: '原打卡点数',
+                newSpots: '新打卡点数',
+                originalRent: '原租金',
+                newRent: '新租金',
+                originalRating: '原评级',
+                newRating: '新评级',
+                droneMonitorIncome: '生态监测收入',
+                droneSeedingIncome: '无人机播种收入',
+                droneFertilizeIncome: '无人机施肥收入',
+                droneAgriMonitorIncome: '农业监测收入',
+                traditionalAgriCost: '传统农业成本',
+                droneAgriCost: '无人机农业成本',
+                agriFamilies: '农业家庭数',
+                ecommIncome: '电商收入',
+                ecommCost: '电商成本',
+                offlineIncome: '线下收入',
+                activityRate: '活跃率(%)',
+                rebuyRate: '复购率(%)',
+                privateUsers: '私域用户数'
+            };
+            return labels[fieldId] || fieldId;
+        }
+
+        function processImportData() {
+            if (!parsedTableData) {
+                alert('请先加载数据文件！');
+                return;
+            }
+            
+            let importCount = 0;
+            
+            parsedTableData.headers.forEach(header => {
+                const matchedField = matchField(header);
+                if (matchedField) {
+                    const value = parsedTableData.data[0]?.[header];
+                    if (value) {
+                        const input = document.getElementById(matchedField);
+                        if (input) {
+                            // 移除可能的百分号或单位
+                            let cleanValue = value.toString().replace(/[%元个月h小时]/g, '').trim();
+                            input.value = cleanValue;
+                            importCount++;
+                        }
+                    }
+                }
+            });
+            
+            if (importCount > 0) {
+                closeImportModal();
+                showSuccessToast(`✓ 成功导入 ${importCount} 个字段！`);
+                // 触发输入事件以更新UI
+                document.querySelectorAll('input[type="number"]').forEach(input => {
+                    input.dispatchEvent(new Event('input', { bubbles: true }));
+                });
+                // 清空已保存的数据
+                parsedTableData = null;
+            } else {
+                alert('未识别到有效字段，请检查数据格式！');
+            }
+        }
+
+        function calculateAllModules() {
+            try {
+                calculateHomestay();
+                calculateSocial();
+                calculateEcology();
+                calculateAgriculture();
+                calculateDigital();
+                
+                showSuccessToast('✓ 所有模块计算完成！');
+                
+                // 自动打开综合评估面板
+                setTimeout(() => {
+                    openPanel();
+                }, 500);
+            } catch (error) {
+                console.error('计算错误:', error);
+                alert('计算过程中出现错误，请检查数据！');
+            }
+        }
+
+        function exportResults() {
+            const results = {
+                '民宿经营': {
+                    '距1.5h基准差值': document.getElementById('stayTimeGap')?.textContent || '-',
+                    '停留时间提升空间': document.getElementById('stayTimeIncrease')?.textContent || '-',
+                    '人均消费提升空间': document.getElementById('perCapitaIncrease')?.textContent || '-',
+                    '综合消费提升指数': document.getElementById('incomeIncrease')?.textContent || '-',
+                    '日均每游客增收潜力': document.getElementById('dailyGain')?.textContent || '-',
+                    '模块评分': document.getElementById('score1')?.textContent || '-'
+                },
+                '乡村文旅': {
+                    '原收入': document.getElementById('originalIncome')?.textContent || '-',
+                    '升级后收入': document.getElementById('upgradedIncome')?.textContent || '-',
+                    '收入增长': document.getElementById('incomeGrowth')?.textContent || '-',
+                    '家庭增收': document.getElementById('familyIncrease')?.textContent || '-',
+                    '模块评分': document.getElementById('score2')?.textContent || '-'
+                },
+                '村落生态': {
+                    '打卡点增加': document.getElementById('spotIncrease')?.textContent || '-',
+                    '租金涨幅': document.getElementById('rentIncrease')?.textContent || '-',
+                    '评级提升': document.getElementById('ratingIncrease')?.textContent || '-',
+                    '生态监测效益': document.getElementById('droneMonitorResult')?.textContent || '-',
+                    '模块评分': document.getElementById('score3')?.textContent || '-'
+                },
+                '低空经济': {
+                    '无人机农业总收入': document.getElementById('droneAgriTotalIncome')?.textContent || '-',
+                    '成本节约': document.getElementById('agriCostSaving')?.textContent || '-',
+                    '户均增收': document.getElementById('agriFamilyIncrease')?.textContent || '-',
+                    '模块评分': document.getElementById('score5')?.textContent || '-'
+                },
+                '数字营销': {
+                    '数字平台净收入': document.getElementById('digitalNetIncome')?.textContent || '-',
+                    '相对优势': document.getElementById('digitalAdvantage')?.textContent || '-',
+                    '私域社群价值': document.getElementById('privateValue')?.textContent || '-',
+                    '模块评分': document.getElementById('score4')?.textContent || '-'
+                },
+                '综合评估': {
+                    '综合评分': document.getElementById('totalScore')?.textContent || '-',
+                    '评级': document.getElementById('grade')?.textContent || '-'
+                }
+            };
+            
+            let csvContent = '\uFEFF'; // BOM for UTF-8
+            csvContent += '模块,指标,数值\n';
+            
+            for (const [module, data] of Object.entries(results)) {
+                for (const [indicator, value] of Object.entries(data)) {
+                    csvContent += `"${module}","${indicator}","${value}"\n`;
+                }
+            }
+            
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `效益分析结果_${new Date().toLocaleDateString()}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showSuccessToast('✓ 结果已导出为CSV文件！');
+        }
+
+        // 监听输入框变化，实时更新映射预览
+        document.addEventListener('DOMContentLoaded', () => {
+            // 初始化文件拖拽区域
+            initFileDropZone();
+        });
+
+        function getVal(id) {
+            const val = parseFloat(document.getElementById(id).value);
+            return isNaN(val) ? 0 : val;
+        }
+
+        function formatMoney(val) {
+            return val.toLocaleString('zh-CN') + ' 元';
+        }
+
+        function formatPercent(val) {
+            return val.toFixed(1) + '%';
+        }
+
+        function formatIncrease(val) {
+            return (val >= 0 ? '+' : '') + val.toFixed(1);
+        }
+
+        function openPanel() {
+            document.getElementById('sidePanel').classList.add('open');
+            document.querySelector('.overlay').classList.add('show');
+        }
+
+        function closePanel() {
+            document.getElementById('sidePanel').classList.remove('open');
+            document.querySelector('.overlay').classList.remove('show');
+        }
+
+        function calculateHomestay() {
+            const stayTime = getVal('stayTime');
+            const perCapita = getVal('perCapita');
+            const targetStayTime = getVal('targetStayTime');
+            const targetPerCapita = getVal('targetPerCapita');
+            const dronePromoIncome = getVal('dronePromoIncome');
+
+            const stayTimeGap = BASELINE_STAY_TIME - stayTime;
+            const stayTimeInc = targetStayTime - stayTime;
+            const perCapitaInc = targetPerCapita - perCapita;
+            
+            const stayTimeRatio = targetStayTime / Math.max(stayTime, 0.1);
+            const perCapitaRatio = targetPerCapita / Math.max(perCapita, 1);
+            const incomeInc = (stayTimeRatio * perCapitaRatio - 1) * 100;
+
+            const dailyGain = (targetStayTime - stayTime) * (targetPerCapita - perCapita);
+
+            document.getElementById('stayTimeGap').textContent = formatIncrease(stayTimeGap) + ' 小时';
+            document.getElementById('stayTimeIncrease').textContent = formatIncrease(stayTimeInc) + ' 小时';
+            document.getElementById('perCapitaIncrease').textContent = formatIncrease(perCapitaInc) + ' 元';
+            document.getElementById('incomeIncrease').textContent = formatPercent(incomeInc);
+            document.getElementById('dailyGain').textContent = incomeInc > 0 ? formatMoney(dailyGain) : '-';
+            document.getElementById('homestayExtraIncome').textContent = formatMoney(dronePromoIncome);
+
+            moduleScores.score1 = isNaN(incomeInc) || incomeInc < 0 ? 0 : Math.min(incomeInc, 100);
+            return moduleScores.score1;
+        }
+
+        function calculateSocial() {
+            const originalWage = getVal('originalWage');
+            const embroideryOrderIncome = getVal('embroideryOrderIncome');
+            const culturalProductIncome = getVal('culturalProductIncome');
+            const intangibleIncome = getVal('intangibleIncome');
+            const gameIncome = getVal('gameIncome');
+            const photoIncome = getVal('photoIncome');
+            const studyTourCoopIncome = getVal('studyTourCoopIncome');
+            const embroideryFamilies = getVal('embroideryFamilies');
+
+            const originalIncome = originalWage;
+            const upgradedIncome = originalWage + embroideryOrderIncome + culturalProductIncome + intangibleIncome + gameIncome + photoIncome + studyTourCoopIncome;
+            const growthRate = originalIncome > 0 ? (upgradedIncome - originalIncome) / originalIncome * 100 : 0;
+
+            document.getElementById('originalIncome').textContent = formatMoney(originalIncome);
+            document.getElementById('upgradedIncome').textContent = formatMoney(upgradedIncome);
+            document.getElementById('incomeGrowth').textContent = formatPercent(growthRate);
+
+            const wageIncrease = embroideryOrderIncome + culturalProductIncome + intangibleIncome + gameIncome + photoIncome + studyTourCoopIncome;
+            const embroideryIncrease = embroideryOrderIncome;
+            const culturalIncrease = culturalProductIncome;
+            const otherTotal = intangibleIncome + gameIncome + photoIncome + studyTourCoopIncome;
+            const otherIncrease = otherTotal;
+            const familyIncrease = wageIncrease;
+            const annualFamilyIncrease = familyIncrease * 12 * Math.max(embroideryFamilies, 1);
+
+            document.getElementById('wageIncrease').textContent = formatMoney(wageIncrease);
+            document.getElementById('embroideryIncrease').textContent = formatMoney(embroideryIncrease);
+            document.getElementById('culturalIncrease').textContent = formatMoney(culturalIncrease);
+            document.getElementById('otherIncrease').textContent = formatMoney(otherIncrease);
+            document.getElementById('familyIncrease').textContent = formatMoney(familyIncrease);
+            document.getElementById('annualFamilyIncrease').textContent = formatMoney(annualFamilyIncrease);
+
+            moduleScores.score2 = Math.min(growthRate, 100);
+            return moduleScores.score2;
+        }
+
+        function calculateEco() {
+            const originalSpots = getVal('originalSpots');
+            const newSpots = getVal('newSpots');
+            const originalRent = getVal('originalRent');
+            const newRent = getVal('newRent');
+            const originalRating = getVal('originalRating');
+            const newRating = getVal('newRating');
+            const droneMonitorIncome = getVal('droneMonitorIncome');
+
+            const spotInc = originalSpots > 0 ? (newSpots - originalSpots) / originalSpots * 100 : 0;
+            const rentInc = originalRent > 0 ? (newRent - originalRent) / originalRent * 100 : 0;
+            const ratingInc = newRating - originalRating;
+
+            document.getElementById('spotIncrease').textContent = formatPercent(spotInc);
+            document.getElementById('rentIncrease').textContent = formatPercent(rentInc);
+            document.getElementById('ratingIncrease').textContent = formatIncrease(ratingInc) + ' 星';
+            document.getElementById('droneMonitorResult').textContent = formatMoney(droneMonitorIncome);
+
+            const ecoScore = (spotInc * 0.3 + rentInc * 0.4 + ratingInc * 10 * 0.3);
+            moduleScores.score3 = Math.min(Math.max(ecoScore, 0), 100);
+            return moduleScores.score3;
+        }
+
+        function calculateAgri() {
+            const droneSeedingIncome = getVal('droneSeedingIncome');
+            const droneFertilizeIncome = getVal('droneFertilizeIncome');
+            const droneAgriMonitorIncome = getVal('droneAgriMonitorIncome');
+            const traditionalAgriCost = getVal('traditionalAgriCost');
+            const droneAgriCost = getVal('droneAgriCost');
+            const agriFamilies = getVal('agriFamilies');
+
+            const droneAgriTotal = droneSeedingIncome + droneFertilizeIncome + droneAgriMonitorIncome;
+            const costSaving = traditionalAgriCost - droneAgriCost;
+            const familyIncrease = droneAgriTotal + costSaving;
+            const annualIncrease = familyIncrease * 12 * Math.max(agriFamilies, 1);
+
+            document.getElementById('droneAgriTotalIncome').textContent = formatMoney(droneAgriTotal);
+            document.getElementById('agriCostSaving').textContent = formatMoney(costSaving);
+            document.getElementById('agriFamilyIncrease').textContent = formatMoney(familyIncrease);
+            document.getElementById('agriAnnualIncrease').textContent = formatMoney(annualIncrease);
+
+            const agriScore = droneAgriTotal > 0 ? Math.min(50 + droneAgriTotal / 100, 100) : 0;
+            moduleScores.score5 = Math.min(Math.max(agriScore, 0), 100);
+            return moduleScores.score5;
+        }
+
+        function calculateDigital() {
+            const ecommIncome = getVal('ecommIncome');
+            const ecommCost = getVal('ecommCost');
+            const offlineIncome = getVal('offlineIncome');
+            const activityRate = getVal('activityRate');
+            const rebuyRate = getVal('rebuyRate');
+            const privateUsers = getVal('privateUsers');
+
+            const digitalNet = ecommIncome - ecommCost;
+            const advantage = digitalNet - offlineIncome;
+            const privateValue = activityRate * rebuyRate * privateUsers / 10000;
+
+            document.getElementById('digitalNetIncome').textContent = formatMoney(digitalNet);
+            document.getElementById('digitalAdvantage').textContent = formatMoney(advantage);
+            document.getElementById('privateValue').textContent = privateValue.toFixed(1) + ' 万元';
+
+            const digitalScore = advantage > 0 ? Math.min(50 + privateValue * 5, 100) : Math.max(50 + advantage / 1000, 0);
+            moduleScores.score4 = Math.min(Math.max(digitalScore, 0), 100);
+            return moduleScores.score4;
+        }
+
+        function calculateAll() {
+            const w1 = getVal('weight1');
+            const w2 = getVal('weight2');
+            const w3 = getVal('weight3');
+            const w4 = getVal('weight4');
+            const w5 = getVal('weight5');
+            const totalWeight = w1 + w2 + w3 + w4 + w5;
+
+            document.getElementById('weightSum').textContent = totalWeight + '%';
+
+            if (totalWeight === 0) {
+                alert('请设置至少一个大于0的权重');
+                return;
+            }
+
+            // 先计算各模块得分
+            calculateHomestay();
+            calculateSocial();
+            calculateEco();
+            calculateAgri();
+            calculateDigital();
+
+            // 显示各模块得分
+            document.getElementById('score1').textContent = moduleScores.score1.toFixed(1);
+            document.getElementById('score2').textContent = moduleScores.score2.toFixed(1);
+            document.getElementById('score3').textContent = moduleScores.score3.toFixed(1);
+            document.getElementById('score4').textContent = moduleScores.score4.toFixed(1);
+            document.getElementById('score5').textContent = moduleScores.score5.toFixed(1);
+
+            const totalScore = (moduleScores.score1 * w1 + moduleScores.score2 * w2 + moduleScores.score3 * w3 + moduleScores.score4 * w4 + moduleScores.score5 * w5) / totalWeight;
+
+            document.getElementById('totalScore').textContent = totalScore.toFixed(1);
+            document.getElementById('finalScore').style.display = 'block';
+
+            let grade, note;
+            if (totalScore >= 80) {
+                grade = '优秀';
+                note = '项目具有很强的综合效益，建议重点推进';
+            } else if (totalScore >= 60) {
+                grade = '良好';
+                note = '项目具有一定效益，可逐步实施优化';
+            } else if (totalScore >= 40) {
+                grade = '一般';
+                note = '效益有待提升，建议加强营销和生态建设';
+            } else {
+                grade = '较弱';
+                note = '需要重新评估项目方向或加强核心建设';
+            }
+
+            document.getElementById('grade').textContent = grade;
+            document.getElementById('analysisNote').textContent = note;
+        }
+
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                const targetId = 'tab-' + tab.dataset.tab;
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+    
+    <!-- 数据导入模态框 -->
+    <div class="overlay" id="importOverlay" onclick="closeImportModal()"></div>
+    <div class="import-modal" id="importModal">
+        <button class="close-modal" onclick="closeImportModal()">×</button>
+        <h3>数据导入</h3>
+        
+        <div class="import-section">
+            <h4>� 拖入或选择数据文件</h4>
+            <div class="drop-zone" id="dropZone">
+                <input type="file" id="fileInput" accept=".csv,.xlsx,.xls,.txt">
+                <div class="drop-zone-icon">📁</div>
+                <div class="drop-zone-text">将文件拖入此处，或点击选择文件</div>
+                <div class="drop-zone-hint">支持 .csv, .xlsx, .xls, .txt 格式</div>
+            </div>
+            <div class="import-hint" style="margin-top: 16px;">
+                💡 <strong>文件要求：</strong><br>
+                • 第一行为标题行（字段名）<br>
+                • 数据行从第二行开始<br>
+                • 支持 CSV、Excel、文本文件
+            </div>
+        </div>
+        
+        <div class="import-section">
+            <h4>🔍 字段映射预览</h4>
+            <div class="mapping-preview" id="mappingPreview">
+                <div class="mapping-item">
+                    <span class="field">等待数据...</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="import-actions">
+            <button class="import-btn-secondary" onclick="clearImportData()">清空数据</button>
+            <button class="import-btn-primary" onclick="processImportData()">导入数据</button>
+        </div>
+        
+        <div class="batch-actions">
+            <button class="batch-btn batch-btn-calculate" onclick="calculateAllModules()">🚀 批量计算所有模块</button>
+            <button class="batch-btn batch-btn-export" onclick="exportResults()">📤 导出结果</button>
+        </div>
+    </div>
+    
+    <!-- 成功提示 -->
+    <div class="success-toast" id="successToast">✓ 数据导入成功！</div>
+</body>
+</html>
