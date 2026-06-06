@@ -476,7 +476,8 @@
         .nav-actions {
             position: absolute;
             right: 20px;
-            top: 20px;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
             gap: 12px;
         }
@@ -810,6 +811,7 @@
         <div class="producer-info" style="font-size: 12px; opacity: 0.7; margin-top: 8px;">制作人：齐浩男 &nbsp; 框架搭建：田钰萱</div>
         <div class="nav-actions">
             <button class="nav-btn nav-btn-import" onclick="openImportModal()">📥 数据导入</button>
+            <button class="nav-btn nav-btn-evaluate" onclick="openPanel()">📊 综合评估</button>
         </div>
     </div>
 
@@ -1239,7 +1241,7 @@
     </div>
 
     <!-- 遮罩层 -->
-    <div class="overlay" id="panelOverlay" onclick="closePanel()"></div>
+    <div class="overlay" onclick="closePanel()"></div>
 
     <!-- 侧边面板 -->
     <div class="side-panel" id="sidePanel">
@@ -1742,12 +1744,12 @@
 
         function openPanel() {
             document.getElementById('sidePanel').classList.add('open');
-            document.getElementById('panelOverlay').classList.add('show');
+            document.querySelector('.overlay').classList.add('show');
         }
 
         function closePanel() {
             document.getElementById('sidePanel').classList.remove('open');
-            document.getElementById('panelOverlay').classList.remove('show');
+            document.querySelector('.overlay').classList.remove('show');
         }
 
         function calculateHomestay() {
